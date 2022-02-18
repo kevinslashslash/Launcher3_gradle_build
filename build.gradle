@@ -166,6 +166,7 @@ dependencies {
     androidTestImplementation "androidx.annotation:annotation:${ANDROID_X_VERSION}"
 
     implementation "com.google.protobuf:protobuf-lite:3.0.1"
+    implementation "androidx.slice:slice-core:1.0.0"
     implementation project(':plugin_core')
 }
 
