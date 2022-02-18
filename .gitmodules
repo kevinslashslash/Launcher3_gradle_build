@@ -1,0 +1,3 @@
+[submodule "launcher3_systemui_iconloaderlib"]
+	path = launcher3_systemui_iconloaderlib
+	url = https://github.com/kevinslashslash/launcher3_systemui_iconloaderlib.git
