@@ -165,20 +165,29 @@ dependencies {
     androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
     androidTestImplementation "androidx.annotation:annotation:${ANDROID_X_VERSION}"
 
+    implementation "com.google.protobuf:protobuf-lite:3.0.1"
     implementation project(':plugin_core')
 }
 
 protobuf {
     // Configure the protoc executable
     protoc {
-        artifact = "com.google.protobuf:protoc:${protocVersion}"
+        artifact = "com.google.protobuf:protoc:3.17.3"
     }
+    plugins {
+        javalite {
+            artifact = 'com.google.protobuf:protoc-gen-javalite:3.0.0'
+        }
+    }
+
     generateProtoTasks {
         all().each { task ->
             task.builtins {
                 remove java
-                java {
-                    option "lite"
+            }
+            task.plugins {
+                javalite {
+                    option "enum_style=java"
                 }
             }
         }
