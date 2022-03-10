@@ -2,7 +2,6 @@ buildscript {
     repositories {
         mavenCentral()
         google()
-        jcenter()
     }
     dependencies {
         classpath GRADLE_CLASS_PATH
@@ -171,6 +170,8 @@ dependencies {
     implementation "com.google.protobuf:protobuf-lite:3.0.1"
     implementation "androidx.slice:slice-core:1.0.0"
     implementation project(':plugin_core')
+
+    api 'com.airbnb.android:lottie:3.3.0'
 }
 
 protobuf {
