@@ -8,7 +8,7 @@ git clone https://github.com/kevinslashslash/Launcher3_gradle_build.git
 cd Launcher3_gradle_build
 git submodule init
 git submodule update
-./gradlew assembleAopsWithoutQuickstepDebug
+./gradlew assembleAospWithoutQuickstepDebug
 ```
 
 
